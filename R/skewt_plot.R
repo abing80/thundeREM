@@ -63,7 +63,7 @@ skewt_plot = function(ptop = 750,
   ymax = skewty(1040)
   #ymin = skewty(50)
   ymin = skewty(ptop)
-  xmin = skewtx(-25, skewty(1040))
+  xmin = skewtx(0, skewty(1040))
   # move drawing area on a chart:
   xmax = skewtx(38.3, skewty(995))
   
@@ -73,8 +73,8 @@ skewt_plot = function(ptop = 750,
   plot(xc, yc, type = "l", axes = FALSE, xlab = "", ylab = "", lwd = 1) 
   
   ypos = skewty(1040)
-  degc = seq(-20, 40, by = 5)
-  axis(1, at = skewtx(degc, ypos), labels = seq(-20, 40, by = 5), pos = ymax, cex.axis = 0.65, padj = -0.15, tck = -0.01)
+  degc = seq(0, 40, by = 5)
+  axis(1, at = skewtx(degc, ypos), labels = seq(0, 40, by = 5), pos = ymax, cex.axis = 0.65, padj = -0.15, tck = -0.01)
   mtext(side = 1, line = 0, expression(paste("Temperature [\u00b0C]")), cex = 0.65)
   
   pres = c(1040, 1000, 950, 900, 850, 800, 750)
@@ -97,7 +97,7 @@ skewt_plot = function(ptop = 750,
   #if(ptop == 150) lendt[1:8] = c(222, 303, 414, 565, 770, 1050, 1050, 1050)
   lendt[1:11] = c(49, 63, 87, 118, 163, 222, 303, 414, 565, 770, 1040)
   
-  inds = seq(1, length(temp))[(temp > -20 & temp < 40)]
+  inds = seq(1, length(temp))[(temp > 0 & temp < 40)]
   exponent = (127.182 - (kinkx - 0.54 * temp[inds])/0.90692)/44.061
   #rendt = rep(50, NTEMP)
   
@@ -127,7 +127,7 @@ skewt_plot = function(ptop = 750,
   if (isotherm0) {
     inds = which(temp == 0)
     segments(xl[inds], yl[inds], xr[inds], yr[inds], col = "blue3", lwd = 1, lty = 3)
-    inds = which(temp == -20)
+    inds = which(temp == 0)
     segments(xl[inds], yl[inds], xr[inds], yr[inds], col = "blue3", lwd = 1, lty = 3)
   }
   # upper labels for temperature:
