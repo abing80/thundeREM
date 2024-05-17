@@ -21,11 +21,11 @@
 #' @return Draws a Skew-T log-p diagram
 #' 
 #' @examples 
-#' skewt_plot(ptop = 100)
+#' skewt_plot(ptop = 700)
 #' 
-#' skewt_plot(ptop = 150, temp_stripes = TRUE) # add color stripes for temperature
+#' skewt_plot(ptop = 750, temp_stripes = TRUE) # add color stripes for temperature
 #' 
-#' skewt_plot(ptop = 100, close_par = FALSE)
+#' skewt_plot(ptop = 700, close_par = FALSE)
 #' title("Your title")
 #' mtext('WMO ID: 11035, 2011-08-23 1200 UTC', padj = -0.5, col = "white")
 #' data("sounding_vienna")
@@ -38,7 +38,7 @@
 #' skewt_lines(output$tempV,output$pressure, col = "red3", lty = 3, lwd = 1.5)
 #' 
 
-skewt_plot = function(ptop = 100, 
+skewt_plot = function(ptop = 700, 
                       isoterms_col = "#d8be9b",
                       temp_stripes = FALSE, 
                       mixing_ratio_col = "#8470FF90", 
