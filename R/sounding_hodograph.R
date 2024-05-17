@@ -99,21 +99,6 @@ sounding_hodograph = function(ws, wd, altitude, max_hght = 2250, max_speed = 25,
     }
   }
 
-  if (SRH_polygon == "03km_LM") {
-    parametry2 = sounding_compute(seq(1000, 100, length.out = length(wd)), altitude, seq(30, -60, length.out = length(wd)), seq(20, -40, length.out = length(wd)), wd, ws, storm_motion = storm_motion, accuracy = 3)
-    parametry3 = sounding_export(seq(1000, 100, length.out = length(wd)), altitude, seq(30, -60, length.out = length(wd)), seq(20, -40, length.out = length(wd)), wd, ws, storm_motion = storm_motion)
-    LM_y = round(-parametry2[which(names(parametry2) == "Bunkers_LM_M")] * cos(parametry2[which(names(parametry2) == "Bunkers_LM_A")] * pi / 180), 2)
-    LM_x = round(-parametry2[which(names(parametry2) == "Bunkers_LM_M")] * sin(parametry2[which(names(parametry2) == "Bunkers_LM_A")] * pi / 180), 2) # LM_x = m_x1 - 7.5 * (sqrt( 1 / (1+slope2*slope2)))
-    uSRH = c(round(-parametry3$ws * 0.514444 * sin(parametry3$wd * pi / 180), 2)[(parametry3$altitude - parametry3$altitude[1]) >= 0 & (parametry3$altitude - parametry3$altitude[1]) <= 3000])
-    vSRH = c(round(-parametry3$ws * 0.514444 * cos(parametry3$wd * pi / 180), 2)[(parametry3$altitude - parametry3$altitude[1]) >= 0 & (parametry3$altitude - parametry3$altitude[1]) <= 3000])
-    for (i in 1:(1 + length(uSRH))) {
-      polygon(c(LM_x, uSRH[i:(i + 1)]),
-        c(LM_y, vSRH[i:(i + 1)]),
-        col = "red", border = NA
-      )
-    }
-  }
-
   if (SRH_polygon == "01km_LM") {
     parametry2 = sounding_compute(seq(1000, 100, length.out = length(wd)), altitude, seq(30, -60, length.out = length(wd)), seq(20, -40, length.out = length(wd)), wd, ws, storm_motion = storm_motion, accuracy = 3)
     parametry3 = sounding_export(seq(1000, 100, length.out = length(wd)), altitude, seq(30, -60, length.out = length(wd)), seq(20, -40, length.out = length(wd)), wd, ws, storm_motion = storm_motion)
