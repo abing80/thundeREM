@@ -30,7 +30,7 @@
 #'
 
 sounding_barbs <- function(pressure, ws, wd, altitude,
-                           ptop = 700, interpolate = TRUE, 
+                           ptop = 750, interpolate = TRUE, 
                            showaxis = FALSE, barb_cex = 0.3, ...){
   
   altitude = altitude - altitude[1]
@@ -49,7 +49,7 @@ sounding_barbs <- function(pressure, ws, wd, altitude,
   #c(bottom, left, top, right) 
   #par(mar = c(2, 1.5, 1 ,6))
   
-  ymax = skewty(1050)
+  ymax = skewty(1040)
   #ymin = skewty(50)
   ymin = skewty(ptop)
   xmin = 0
@@ -65,7 +65,7 @@ sounding_barbs <- function(pressure, ws, wd, altitude,
   }
   
   #prs = pressure[which((altitude-altitude[1]) %in% seq(0,16000,500))]
-  prs = c(1050, 1000, 850, 700)
+  prs = c(1000, 950, 900, 850, 800, 750)
   NPRES = length(prs)
   
   ypos = skewty(prs[2:NPRES])
