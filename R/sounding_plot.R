@@ -52,7 +52,7 @@ sounding_plot = function(pressure, altitude, temp, dpt, wd, ws,
   }
   
   convert = FALSE
-  ptop = 700
+  ptop = 750
   
   dev_size = dev.size("in")
   if (dev_size[1] < 10 | dev_size[2] < 7.5) {
@@ -684,15 +684,15 @@ sounding_plot = function(pressure, altitude, temp, dpt, wd, ws,
   )
   plot(THETAE, output$altitude - output$altitude[1],
        xaxt = "n", yaxt = "n", xlab = "",
-       type = "l", xlim = c(245, 385), ylim = c(100, 7500), lwd = 2, col = "magenta"
+       type = "l", xlim = c(270, 350), ylim = c(100, 7500), lwd = 2, col = "magenta"
   )
   axis(4,
-       at = seq(0, 7000, 1000), las = 1, padj = -0.35, hadj = 1.25, xpd = TRUE,
-       labels = c("sfc ", "1 km", "2 km", "3 km", "4 km", "5 km", "6 km", "7 km"),
+       at = seq(0, 2000, 250), las = 1, padj = -0.35, hadj = 1.25, xpd = TRUE,
+       labels = c("sfc ", "250m", "500m", "750m", "1000m", "1250m", "1500m", "1750m", "2000m"),
        cex.axis = 0.56, tck = 0.1, lwd = 0.35
   )
   axis(1,
-       at = seq(245, 385, 25), xpd = TRUE, padj = -1.1,
+       at = seq(270, 350, 20), xpd = TRUE, padj = -1.1,
        cex.axis = 0.56, tck = -0.04, lwd = 0.35
   )
   text(315, 7100, "Theta-e [K]", cex = 0.65, col = "black")
@@ -707,8 +707,8 @@ sounding_plot = function(pressure, altitude, temp, dpt, wd, ws,
        type = "l", xlim = c(0, 119), ylim = c(100, 7500), lwd = 2, col = "blue"
   )
   axis(4,
-       at = seq(0, 7000, 1000), las = 1, padj = -0.35, hadj = 1.25, xpd = TRUE,
-       labels = c("sfc ", "1 km", "2 km", "3 km", "4 km", "5 km", "6 km", "7 km"),
+       at = seq(0, 2000, 250), las = 1, padj = -0.35, hadj = 1.25, xpd = TRUE,
+       labels = c("sfc ", "250m", "500m", "750m", "1000m", "1250m", "1500m", "1750m", "2000m"),
        cex.axis = 0.56, tck = 0.1, lwd = 0.35
   )
   axis(1,
