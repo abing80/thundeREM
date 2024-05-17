@@ -65,7 +65,7 @@ sounding_barbs <- function(pressure, ws, wd, altitude,
   }
   
   #prs = pressure[which((altitude-altitude[1]) %in% seq(0,16000,500))]
-  prs = c(1000, 975, 950, 925, 900, 875, 850, 825, 800, 775, 750)
+  prs = c(1025, 1000, 975, 950, 925, 900, 875, 850, 825, 800, 775, 750)
   NPRES = length(prs)
   
   ypos = skewty(prs[2:NPRES])
