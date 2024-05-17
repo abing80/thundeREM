@@ -60,24 +60,24 @@ skewt_plot = function(ptop = 700,
     par(pty = "s") # preserve correct aspect ratio
   }
   
-  ymax = skewty(1050)
+  ymax = skewty(1040)
   #ymin = skewty(50)
   ymin = skewty(ptop)
-  xmin = skewtx(-50, skewty(1050))
+  xmin = skewtx(-25, skewty(1040))
   # move drawing area on a chart:
-  xmax = skewtx(48.3, skewty(995))
+  xmax = skewtx(38.3, skewty(995))
   
   xc = c(xmin, xmin, xmax, xmax, xmin)
   yc = c(ymin, ymax, ymax, ymin, ymin)
   
   plot(xc, yc, type = "l", axes = FALSE, xlab = "", ylab = "", lwd = 1) 
   
-  ypos = skewty(1050)
-  degc = seq(-50, 50, by = 10)
-  axis(1, at = skewtx(degc, ypos), labels = seq(-50, 50, by = 10), pos = ymax, cex.axis = 0.65, padj = -0.15, tck = -0.01)
+  ypos = skewty(1040)
+  degc = seq(-25, 40, by = 5)
+  axis(1, at = skewtx(degc, ypos), labels = seq(-25, 40, by = 10), pos = ymax, cex.axis = 0.65, padj = -0.15, tck = -0.01)
   mtext(side = 1, line = 0, expression(paste("Temperature [\u00b0C]")), cex = 0.65)
   
-  pres = c(1050, 1000, 850, 700, 500, 300, 200, 100)
+  pres = c(1050, 1000, 950, 900, 850, 800, 750, 700)
   NPRES = length(pres)
   xpl = rep(xmin, times = NPRES)
   xpr = c(xmax, xmax, xmax, xmax, skewtx(20, skewty(500)))
