@@ -93,7 +93,7 @@ sounding_barbs <- function(pressure, ws, wd, altitude,
     v = round(-ws * cos(wd * pi/180), 2)
     
     # the heights values needs to be modified here:
-    hghts = seq(0, max(altitude, na.rm = TRUE), by = 500)
+    hghts = seq(0, max(altitude, na.rm = TRUE), by = 250)
     pres = approx(y = pressure, x = altitude, xout = hghts)$y
     u = approx(y = u, x = altitude, xout = hghts)$y
     v = approx(y = v, x = altitude, xout = hghts)$y
