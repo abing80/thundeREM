@@ -23,7 +23,7 @@
 #' attach(sounding_vienna)
 #' sounding_wind(pressure = pressure, ws = ws, yaxs = TRUE)
 
-sounding_wind = function(pressure, ws, ptop = 700, yaxs = TRUE, ...){
+sounding_wind = function(pressure, ws, ptop = 750, yaxs = TRUE, ...){
         
         if (ptop > 200) {
                 stop("\nptop argument needs to be set < 200 (hPa)!")
@@ -33,7 +33,7 @@ sounding_wind = function(pressure, ws, ptop = 700, yaxs = TRUE, ...){
         ws = ws * 0.51444
         
         # define plotting area limits:
-        ymax = skewty(1050)
+        ymax = skewty(1040)
         #ymin = skewty(50)
         ymin = skewty(ptop)
         xmin = 0
@@ -49,7 +49,7 @@ sounding_wind = function(pressure, ws, ptop = 700, yaxs = TRUE, ...){
         mtext(side = 1, line = 1.2, paste("Wind speed (m/s)"), cex = 0.8)
         
         segments(x0 = ws_units, y0 = ymax, x1 = ws_units, y1 = ymin, lwd = 0.5, col = "black", lty = 3)
-        prs = c(1050, 1000, 850, 700, 500, 400, 300, seq(from = 200, to = ptop, by = -50))
+        prs = c(1000, 950, 900, 850, 800, 750)
         Npressure = length(prs)
         
         ypos = skewty(prs[2:Npressure])
