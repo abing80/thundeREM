@@ -684,11 +684,11 @@ sounding_plot = function(pressure, altitude, temp, dpt, wd, ws,
   )
   plot(THETAE, output$altitude - output$altitude[1],
        xaxt = "n", yaxt = "n", xlab = "",
-       type = "l", xlim = c(270, 350), ylim = c(100, 7500), lwd = 2, col = "magenta"
+       type = "l", xlim = c(300, 380), ylim = c(0, 2500), lwd = 2, col = "magenta"
   )
   axis(4,
-       at = seq(0, 2000, 250), las = 1, padj = -0.35, hadj = 1.25, xpd = TRUE,
-       labels = c("sfc ", "250m", "500m", "750m", "1000m", "1250m", "1500m", "1750m", "2000m"),
+       at = seq(0, 2250, 250), las = 1, padj = -0.35, hadj = 1.25, xpd = TRUE,
+       labels = c("sfc ", "250m", "500m", "750m", "1000m", "1250m", "1500m", "1750m", "2000m", "2250m"),
        cex.axis = 0.56, tck = 0.1, lwd = 0.35
   )
   axis(1,
@@ -704,11 +704,11 @@ sounding_plot = function(pressure, altitude, temp, dpt, wd, ws,
   )
   plot(RH, output$altitude - output$altitude[1],
        xaxt = "n", yaxt = "n", xlab = "",
-       type = "l", xlim = c(0, 119), ylim = c(100, 7500), lwd = 2, col = "blue"
+       type = "l", xlim = c(0, 119), ylim = c(0, 2500), lwd = 2, col = "blue"
   )
   axis(4,
-       at = seq(0, 2000, 250), las = 1, padj = -0.35, hadj = 1.25, xpd = TRUE,
-       labels = c("sfc ", "250m", "500m", "750m", "1000m", "1250m", "1500m", "1750m", "2000m"),
+       at = seq(0, 2250, 250), las = 1, padj = -0.35, hadj = 1.25, xpd = TRUE,
+       labels = c("sfc ", "250m", "500m", "750m", "1000m", "1250m", "1500m", "1750m", "2000m", "2250m"),
        cex.axis = 0.56, tck = 0.1, lwd = 0.35
   )
   axis(1,
