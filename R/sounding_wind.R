@@ -49,7 +49,7 @@ sounding_wind = function(pressure, ws, ptop = 750, yaxs = TRUE, ...){
         mtext(side = 1, line = 1.2, paste("Wind speed (m/s)"), cex = 0.8)
         
         segments(x0 = ws_units, y0 = ymax, x1 = ws_units, y1 = ymin, lwd = 0.5, col = "black", lty = 3)
-        prs = c(1000, 950, 900, 850, 800, 750)
+        prs = c(1025, 1000, 975, 950, 925, 900, 875, 850, 825, 800, 775, 750)
         Npressure = length(prs)
         
         ypos = skewty(prs[2:Npressure])
