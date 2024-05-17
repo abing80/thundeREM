@@ -715,7 +715,7 @@ sounding_plot = function(pressure, altitude, temp, dpt, wd, ws,
        at = seq(0, 139, 20), xpd = TRUE, padj = -1.1,
        cex.axis = 0.56, tck = -0.04, lwd = 0.35
   )
-  text(60, 7100, "RH [%]", cex = 0.65, col = "black")
+  text(600, 7100, "RH [%]", cex = 0.65, col = "black")
   
   ####
   
