@@ -23,7 +23,7 @@
 #' attach(sounding_vienna)
 #' sounding_wind(pressure = pressure, ws = ws, yaxs = TRUE)
 
-sounding_wind = function(pressure, ws, ptop = 100, yaxs = TRUE, ...){
+sounding_wind = function(pressure, ws, ptop = 700, yaxs = TRUE, ...){
         
         if (ptop > 200) {
                 stop("\nptop argument needs to be set < 200 (hPa)!")
