@@ -92,12 +92,12 @@ skewt_plot = function(ptop = 700,
   kinkx = skewtx(10.5, skewty(400))
   temp = seq(from = -150, to = 60, by = 10)
   NTEMP = length(temp[temp < 60])
-  lendt = rep(1040, NTEMP) # lower limit in hPa
+  lendt = rep(1050, NTEMP) # lower limit in hPa
   
-  #if(ptop == 150) lendt[1:8] = c(222, 303, 414, 565, 770, 1040, 1040, 1040)
+  #if(ptop == 150) lendt[1:8] = c(222, 303, 414, 565, 770, 1050, 1050, 1050)
   lendt[1:11] = c(49, 63, 87, 118, 163, 222, 303, 414, 565, 770, 1040)
   
-  inds = seq(1, length(temp))[(temp > -50 & temp < 60)]
+  inds = seq(1, length(temp))[(temp > -20 & temp < 40)]
   exponent = (127.182 - (kinkx - 0.54 * temp[inds])/0.90692)/44.061
   #rendt = rep(50, NTEMP)
   
@@ -182,7 +182,7 @@ skewt_plot = function(ptop = 700,
   
   # beginning of moist adiabats:
   if (!is.na(moist_adiabats_col) || moist_adiabats_col != "") {
-    p = seq(from = 1040, to = ptop, by = -2)
+    p = seq(from = 1050, to = ptop, by = -2)
     npts = length(p)
     sy = skewty(p)
     sx = double(length = npts)
