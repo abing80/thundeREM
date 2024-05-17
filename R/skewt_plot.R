@@ -73,11 +73,11 @@ skewt_plot = function(ptop = 700,
   plot(xc, yc, type = "l", axes = FALSE, xlab = "", ylab = "", lwd = 1) 
   
   ypos = skewty(1040)
-  degc = seq(-25, 40, by = 5)
-  axis(1, at = skewtx(degc, ypos), labels = seq(-25, 40, by = 5), pos = ymax, cex.axis = 0.65, padj = -0.15, tck = -0.01)
+  degc = seq(-20, 40, by = 5)
+  axis(1, at = skewtx(degc, ypos), labels = seq(-20, 40, by = 5), pos = ymax, cex.axis = 0.65, padj = -0.15, tck = -0.01)
   mtext(side = 1, line = 0, expression(paste("Temperature [\u00b0C]")), cex = 0.65)
   
-  pres = c(1050, 1000, 950, 900, 850, 800, 750, 700)
+  pres = c(1000, 950, 900, 850, 800, 750, 700)
   NPRES = length(pres)
   xpl = rep(xmin, times = NPRES)
   xpr = c(xmax, xmax, xmax, xmax, skewtx(20, skewty(500)))
@@ -182,7 +182,7 @@ skewt_plot = function(ptop = 700,
   
   # beginning of moist adiabats:
   if (!is.na(moist_adiabats_col) || moist_adiabats_col != "") {
-    p = seq(from = 1050, to = ptop, by = -2)
+    p = seq(from = 1040, to = ptop, by = -2)
     npts = length(p)
     sy = skewty(p)
     sx = double(length = npts)
