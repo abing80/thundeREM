@@ -409,10 +409,10 @@ sounding_plot = function(pressure, altitude, temp, dpt, wd, ws,
   
   
   ### draw labels for km:
-  text(-29,
+  text(50,
        altitude_to_pressure(0),
        paste0("--- Sfc (", round(output$altitude[1]), " m) ---"),
-       pos = 20, cex = 0.65, col = "black")
+       pos = 4, cex = 0.65, col = "black")
   
   lab_hgt_km = function(m = 1000) {
     if (max(output$altitude - output$altitude[1]) > m) {
@@ -421,10 +421,10 @@ sounding_plot = function(pressure, altitude, temp, dpt, wd, ws,
       closest_ind = which.min(round(abs(output$altitude - output$altitude[1] - m)))
       
       if (output$pressure[closest_ind] > 100) {
-        text(-29,
+        text(50,
              altitude_to_pressure(m),
              paste0("--- ", m / 1000, " km"),
-             pos = 20, cex = 0.65, col = "black"
+             pos = 4, cex = 0.65, col = "black"
         )
       }
     }
