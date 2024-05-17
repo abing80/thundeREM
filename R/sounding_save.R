@@ -43,7 +43,7 @@ sounding_save = function(pressure, altitude, temp, dpt, wd, ws,
                          SRH_polygon = "03km", DCAPE = FALSE, filename, ...) {
   
   convert = FALSE
-  ptop = 700 
+  ptop = 750 
   
   stopifnot(length(filename) < 4)
   
