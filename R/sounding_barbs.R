@@ -30,7 +30,7 @@
 #'
 
 sounding_barbs <- function(pressure, ws, wd, altitude,
-                           ptop = 100, interpolate = TRUE, 
+                           ptop = 700, interpolate = TRUE, 
                            showaxis = FALSE, barb_cex = 0.3, ...){
   
   altitude = altitude - altitude[1]
