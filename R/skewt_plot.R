@@ -74,7 +74,7 @@ skewt_plot = function(ptop = 700,
   
   ypos = skewty(1040)
   degc = seq(-25, 40, by = 5)
-  axis(1, at = skewtx(degc, ypos), labels = seq(-25, 40, by = 10), pos = ymax, cex.axis = 0.65, padj = -0.15, tck = -0.01)
+  axis(1, at = skewtx(degc, ypos), labels = seq(-25, 40, by = 5), pos = ymax, cex.axis = 0.65, padj = -0.15, tck = -0.01)
   mtext(side = 1, line = 0, expression(paste("Temperature [\u00b0C]")), cex = 0.65)
   
   pres = c(1050, 1000, 950, 900, 850, 800, 750, 700)
